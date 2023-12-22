@@ -1,7 +1,20 @@
 function minDate(dates) {
-  //write you code here
+  let mind=dates.reduce((pre,curr)=>{
+      let d1=pre.split("/").map(Number);
+      let d2=curr.split("/").map(Number);
+     // console.log(d1);
+      if(d1[0]<=d2[0]&&d1[1]<=d2[1]&&(d1[2]<=d2[2])){
+          return pre;
+      }
+      else{
+          return curr;
+      }
+      //console.log(d1+" "+d2);
+     //return curr;
+      
+  });
+    return mind;
 }
-
 // Do not change the code
 
 var dates = [
